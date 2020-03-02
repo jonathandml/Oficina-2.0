@@ -1,13 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
+
+
+
 <div class="container">
    <div class="p-2">
       <a href="/orcamentos/create" class="btn btn-dark">Novo Orçamento</a>
    </div>
    
    <div>
-      <table class="table table-striped table-hover">
+      <table class="table table table-hover">
          <thead class="thead-dark">
             <tr>
                <th scope="col">Cliente</th>
@@ -24,7 +27,7 @@
                <?php 
                   $date = date_create($estimate->instant);
                ?>
-               <tr class="clickable-row" data-href="/orcamentos/create">
+               <tr data-href="/orcamentos/{{ $estimate->id }}" style="cursor: pointer;">
                   <td>{{ $estimate->client}}</td>
                   <td>{{ $estimate->user->name}}</td>
                   <td>{{ date_format($date,"d/m/Y")}}</td>
@@ -43,5 +46,17 @@
       </div>
    </div>
 </div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+      const rows = document.querySelectorAll("tr[data-href]");
+
+      rows.forEach(row => {
+         row.addEventListener("click", () => {
+            window.location.href = row.dataset.href;
+         });
+      });
+   });
+</script>
 
 @endsection

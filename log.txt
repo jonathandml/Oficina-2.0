@@ -1,0 +1,4 @@
+Nesta versao foi implementado:
+- tela de detalhes do orcamento
+- celulas da tabela de orcamentos clicavel
+- limite do <td> da tabela mudado para 100px

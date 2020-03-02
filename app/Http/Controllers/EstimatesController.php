@@ -34,4 +34,8 @@ class EstimatesController extends Controller
 
         return redirect('/orcamentos');
     }
+
+    public function show(Estimate $estimate){
+        return view('estimates.show', compact('estimate'));
+    }
 }
