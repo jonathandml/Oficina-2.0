@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/orcamentos','EstimatesController@index');
+Route::get('/orcamentos/create','EstimatesController@create');
+Route::post('/orcamentos','EstimatesController@store');
+
