@@ -51,8 +51,11 @@
    </div>
    <div class="pt-2">
       <a href="/orcamentos" class="ml-2 btn btn-dark">Voltar</a>
-      <a href="#" class="ml-2 btn btn-primary">Editar</a>
+      @guest
+      @else
+      <a href="/orcamentos/{{ $estimate->id }}/edit" class="ml-2 btn btn-primary">Editar</a>
       <a href="#" class="ml-2 btn btn-danger">Deletar</a>
+      @endguest
    </div>
 </div>
 @endsection

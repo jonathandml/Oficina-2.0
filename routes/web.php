@@ -19,7 +19,9 @@ Auth::routes();
 
 Route::get('/orcamentos','EstimatesController@index');
 Route::get('/orcamentos/create','EstimatesController@create');
-Route::post('/orcamentos','EstimatesController@store');
+Route::get('orcamentos/{estimate}/edit','EstimatesController@edit');
 Route::get('orcamentos/{estimate}','EstimatesController@show');
+Route::post('/orcamentos','EstimatesController@store');
+Route::patch('orcamentos/{estimate}','EstimatesController@update');
 
 Route::get('/search','EstimatesController@search');

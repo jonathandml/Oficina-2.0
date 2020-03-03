@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Estimate;
 use SebastianBergmann\Environment\Console;
+use Illuminate\Support\Facades\Auth;
 
 class EstimatesController extends Controller
 {
@@ -54,6 +55,28 @@ class EstimatesController extends Controller
         $estimates = Estimate::whereIn('id',$aux)->latest()->paginate(1000);
         return view('estimates.index',['estimates' => $estimates]);
         
+    }
+
+    public function edit(Estimate $estimate){
+        if(!Auth::check()){
+            return redirect('/login');
+        }
+        return view('estimates.update',compact('estimate'));
+    }
+
+    public function update(Estimate $estimate){
+        if(!Auth::check()){
+            return redirect('/login');
+        }
+        $data = request()->validate([
+                'client' => 'required',
+                'description' => 'required',
+                'estimatedValue' => ['required','numeric'],
+            ]);
+    
+            $estimate->update($data);
+    
+            return redirect("/orcamentos");
     }
 
     public function create(){

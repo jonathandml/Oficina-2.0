@@ -9,7 +9,10 @@
    
       <div class="d-flex justify-content-between align-items-baseline">
          <h1>Orçamentos</h3>
+         @guest
+         @else
          <a href="/orcamentos/create" class="btn btn-dark">Novo Orçamento</a>
+         @endguest
       </div>
       <hr>
       <h4>Pesquisar Orçamento</h4>

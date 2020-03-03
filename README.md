@@ -19,6 +19,7 @@ orcamentos."</p>
 - paginação na tela de lista de orçamentos.<br>
 - pesquisa de orçamentos com filtros(vendedor, cliente, intervalo de data)[parcial]<br>
 - tela de detalhes<br>
+- editar orçamento<br>
 <h4>Funcionalidades pendentes:</h4>
 - deletar orçamento<br>
-- editar orçamento<br>
+
