@@ -8,7 +8,7 @@
 
    <h3>Orçamento Nº {{ $estimate->id }}</h4>
    <hr>
-   <div class="col-8 offset-4 pt-3">
+   <div class="col-8 pt-3">
       <dl class="row">
          <dt class="col-sm-2">
             <label for="cliente"><h4>Cliente</h4></label>
@@ -49,7 +49,7 @@
 
       </dl>
    </div>
-   <div class="col-8 offset-4 pt-2">
+   <div class="pt-2">
       <a href="/orcamentos" class="ml-2 btn btn-dark">Voltar</a>
       <a href="#" class="ml-2 btn btn-primary">Editar</a>
       <a href="#" class="ml-2 btn btn-danger">Deletar</a>

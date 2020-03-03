@@ -1,4 +1,3 @@
-Nesta versao foi implementado:
-- tela de detalhes do orcamento
-- celulas da tabela de orcamentos clicavel
-- limite do <td> da tabela mudado para 100px
+- pesquisa de orcamentos na tela de orcamentos foi implementada
+- filtros de pesquisa cliente e vendedor sao Case Sensitive, sera melhorado em proximas versoes
+- depois da pesquisa, a paginacao apresenta um erro, sera concertado em proximas versoes

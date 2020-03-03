@@ -22,3 +22,4 @@ Route::get('/orcamentos/create','EstimatesController@create');
 Route::post('/orcamentos','EstimatesController@store');
 Route::get('orcamentos/{estimate}','EstimatesController@show');
 
+Route::get('/search','EstimatesController@search');
