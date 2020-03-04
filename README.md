@@ -22,8 +22,8 @@ orcamentos."</p>
 - editar orçamento<br>
 - deletar orçamento<br>
 <h4>Testar o projeto</h4>
-- banco de dados está online com alguns orçamentos já inseridos.
-- para testar, é preciso de um servidor local
+- banco de dados está online com alguns orçamentos já inseridos.<br>
+- para testar, é preciso de um servidor local.<br>
 
 
 
