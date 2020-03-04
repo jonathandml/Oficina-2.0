@@ -54,8 +54,45 @@
       @guest
       @else
       <a href="/orcamentos/{{ $estimate->id }}/edit" class="ml-2 btn btn-primary">Editar</a>
-      <a href="#" class="ml-2 btn btn-danger">Deletar</a>
+      <button class="btn btn-danger ml-2" data-estid={{$estimate->id}} data-toggle="modal" data-target="#delete">Deletar</button>
       @endguest
    </div>
 </div>
+<!--Modal para deletar-->
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         
+         <h4 class="modal-title text-center">Confirmar Deleção</h4>
+       </div>
+       <form action="/orcamentos/{{$estimate->id}}" method="post">
+             {{method_field('delete')}}
+             {{csrf_field()}}
+          <div class="modal-body">
+             <p class="text-center">
+                Tem certeza que deseja deletar este orçamento?
+             </p>
+                <input type="hidden" name="estimate_id" id="est_id" value="">
+ 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Deletar</button>
+          </div>
+       </form>
+     </div>
+   </div>
+ </div>
+
+ <script>
+
+   $('#delete').on('show.bs.modal', function (event) {
+       var button = $(event.relatedTarget) 
+       var est_id = button.data('estid') 
+       var modal = $(this)
+       modal.find('.modal-body #est_id').val(est_id);
+ });
+ </script>
+
 @endsection

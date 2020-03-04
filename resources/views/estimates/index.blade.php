@@ -30,6 +30,7 @@
          </form>
       </div>
       <hr>
+      @if(isset($estimates))
       <div>
          <table class="table table-hover">
             <thead class="thead-dark">
@@ -66,6 +67,9 @@
             {{ $estimates->links()}}
          </div>
       </div>
+      @else(isset($message))
+			<p>{{ $message }}</p>
+		@endif
 </div>
 
 <script>

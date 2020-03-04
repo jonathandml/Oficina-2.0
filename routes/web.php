@@ -11,8 +11,15 @@
 |
 */
 
+use App\Http\Controllers\EstimatesController;
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', function () {
-    return view('welcome');
+    if(Auth::check()){
+        return redirect('/orcamentos');
+    }
+    return redirect('login');
+    
 });
 
 Auth::routes();
@@ -23,5 +30,6 @@ Route::get('orcamentos/{estimate}/edit','EstimatesController@edit');
 Route::get('orcamentos/{estimate}','EstimatesController@show');
 Route::post('/orcamentos','EstimatesController@store');
 Route::patch('orcamentos/{estimate}','EstimatesController@update');
+Route::delete('orcamentos/{estimate}','EstimatesController@destroy')->name('estimate.destroy');
 
 Route::get('/search','EstimatesController@search');

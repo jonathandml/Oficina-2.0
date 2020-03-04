@@ -12,7 +12,7 @@ class EstimatesController extends Controller
 {
 
     public function index(){
-        $estimates = Estimate::whereNotNull('id')->latest()->paginate(10);
+        $estimates = Estimate::whereNotNull('id')->latest()->paginate(5);
         return view('estimates.index', compact('estimates'));
     }
 
@@ -52,8 +52,17 @@ class EstimatesController extends Controller
 
         $aux = $aux->pluck('id');
         
-        $estimates = Estimate::whereIn('id',$aux)->latest()->paginate(1000);
-        return view('estimates.index',['estimates' => $estimates]);
+        $estimates = Estimate::whereIn('id',$aux)->latest()->paginate(5)->setpath('');
+        $estimates->appends(array(
+            'seller' => $request->get('seller'),
+            'client' => $request->get('client'),
+            'startDate' => $request->get('startDate'),
+            'endDate' => $request->get('endDate')
+        ));
+        if(count($estimates) > 0){
+            return view('estimates.index',['estimates' => $estimates]);
+        }
+        return view('estimates.index')->withMessage("Nenhum resultado encontrado");
         
     }
 
@@ -103,6 +112,14 @@ class EstimatesController extends Controller
 
     public function show(Estimate $estimate){
         return view('estimates.show', compact('estimate'));
+    }
+
+    public function destroy(Estimate $estimate){
+        if(!Auth::check()){
+            return redirect('/login');
+        }
+        Estimate::destroy($estimate->id);
+        return redirect('/orcamentos');
     }
 
     function console_log( $data ){

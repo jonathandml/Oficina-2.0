@@ -17,9 +17,10 @@ orcamentos."</p>
 - criação de orçamento<br>
 - Lista de orçamentos(ordenadas pela data mais recente).<br>
 - paginação na tela de lista de orçamentos.<br>
-- pesquisa de orçamentos com filtros(vendedor, cliente, intervalo de data)[parcial]<br>
+- pesquisa de orçamentos com filtros(vendedor, cliente, intervalo de data) e com paginação<br>
 - tela de detalhes<br>
 - editar orçamento<br>
-<h4>Funcionalidades pendentes:</h4>
 - deletar orçamento<br>
+<h4>Funcionalidades pendentes:</h4>
+
 
