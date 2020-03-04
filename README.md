@@ -11,7 +11,7 @@ vendas, pois os papeis se perdem no meio da bagunca da oficina. Gostariamos de u
 sistema simples, onde nossos vendedores pudessem cadastrar e consultar os
 orcamentos."</p>
 <h4>Ferrametas utilizadas</h4>
-<p>Feito usando PHP e Laravel Framework, com banco de dados sqlite.</p>
+<p>Feito usando PHP e Laravel Framework, com banco de dados mySql.</p>
 <h4>Funcionalidades</h4>
 - cadastro do usuário(vendedor)<br>
 - criação de orçamento<br>
