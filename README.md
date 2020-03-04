@@ -12,7 +12,7 @@ sistema simples, onde nossos vendedores pudessem cadastrar e consultar os
 orcamentos."</p>
 <h4>Ferrametas utilizadas</h4>
 <p>Feito usando PHP e Laravel Framework, com banco de dados sqlite.</p>
-<h4>Funcionalidades já implementadas:</h4>
+<h4>Funcionalidades</h4>
 - cadastro do usuário(vendedor)<br>
 - criação de orçamento<br>
 - Lista de orçamentos(ordenadas pela data mais recente).<br>
@@ -21,6 +21,6 @@ orcamentos."</p>
 - tela de detalhes<br>
 - editar orçamento<br>
 - deletar orçamento<br>
-<h4>Funcionalidades pendentes:</h4>
+
 
 
