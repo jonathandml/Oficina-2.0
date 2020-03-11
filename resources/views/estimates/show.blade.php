@@ -6,45 +6,45 @@
       $date = date_create($estimate->instant);
    ?>
 
-   <h3>Orçamento Nº {{ $estimate->id }}</h4>
+   <h3>Orçamento Nº {{ $estimate->id }}</h3>
    <hr>
    <div class="col-8 pt-3">
       <dl class="row">
          <dt class="col-sm-2">
-            <label for="cliente"><h4>Cliente</h4></label>
+            <label for="cliente"><p>Cliente</p></label>
          </dt>
          <dd class="col-sm-10">
-            <h4 name="cliente">{{ $estimate->client}}</h4>
+            <p name="cliente">{{ $estimate->client}}</p>
          </dd>
          <dt class="col-sm-2">
-            <label for="seller"><h4>Vendedor</h4></label>
+            <label for="seller"><p>Vendedor</p></label>
          </dt>
          <dd class="col-sm-10">
-            <h4 name="seller">{{ $estimate->user->name }}</h4>
+            <p name="seller">{{ $estimate->user->name }}</p>
          </dd>
          <dt class="col-sm-2">
-            <label for="date"><h4>Data</h4></label>
+            <label for="date"><p>Data</p></label>
          </dt>
          <dd class="col-sm-10">
-            <h4 name="date">{{ date_format($date,"d/m/Y") }}</h4>
+            <p name="date">{{ date_format($date,"d/m/Y") }}</p>
          </dd>
          <dt class="col-sm-2">
-            <label for="time"><h4>Hora</h4></label>
+            <label for="time"><p>Hora</p></label>
          </dt>
          <dd class="col-sm-10">
-            <h4 name="time">{{ date_format($date,"H:i") }}</h4>
+            <p name="time">{{ date_format($date,"H:i") }}</p>
          </dd>
          <dt class="col-sm-2">
-            <label for="estimatedValue"><h4>Valor</h4></label>
+            <label for="estimatedValue"><p>Valor</p></label>
          </dt>
          <dd class="col-sm-10">
-            <h4 name="estimatedValue">R$ {{ $estimate->estimatedValue }}</h4>
+            <p name="estimatedValue">R$ {{ $estimate->estimatedValue }}</p>
          </dd>
          <dt class="col-sm-2">
-            <label for="description"><h4>Descrição</h4></label>
+            <label for="description"><p>Descrição</p></label>
          </dt>
          <dd class="col-sm-10">
-            <h4 name="description">{{ $estimate->description }}</h4>
+            <p name="description">{{ $estimate->description }}</p>
          </dd>
 
       </dl>
