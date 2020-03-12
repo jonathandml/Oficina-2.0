@@ -1,4 +1,0 @@
-- Mensagens de erro traduzidas
-- Erro de paginação na pesquisa consertado
-- Funcionalidade de deletar orçamento implementada
-
